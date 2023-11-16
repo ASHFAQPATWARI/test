@@ -57,7 +57,9 @@ const config: Config = {
         sans: ['var(--font-primary)'],
       },
       boxShadow: {
-        card: '0px 0px 10px 4px rgba(0, 0, 0, 0.04)',
+        card: '0px 0px 8px 5px rgba(0, 0, 0, 0.04)',
+        container: '0px 0px 10px 4px rgba(0, 0, 0, 0.04)',
+        'card-footer': '4px 0px 10px 0px rgba(0, 0, 0, 0.12)',
       },
     },
   },

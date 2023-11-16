@@ -1,4 +1,4 @@
-import Card from '@/components/Card';
+import Container from '@/components/Container';
 
 export default function MyListings() {
   return (
@@ -7,7 +7,7 @@ export default function MyListings() {
         <h4 className="mb-10 text-3xl font-semibold text-primary">
           My companies for sale
         </h4>
-        <Card>
+        <Container>
           <div className="bg-primary-700 rounded-lg p-6">
             <div className="flex gap-6">
               <p className="text-2xl font-medium">
@@ -15,7 +15,7 @@ export default function MyListings() {
               </p>
             </div>
           </div>
-        </Card>
+        </Container>
       </div>
     </div>
   );

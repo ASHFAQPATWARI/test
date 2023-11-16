@@ -1,5 +1,5 @@
 import AdvisorCard, { IAdvisor } from '@/components/AdvisorCard';
-import Card from '@/components/Card';
+import Container from '@/components/Container';
 
 const advisors: IAdvisor[] = [
   {
@@ -83,13 +83,13 @@ export default function Advisor() {
         <h4 className="mb-10 text-3xl font-semibold text-primary">
           Investment advisor
         </h4>
-        <Card>
+        <Container>
           <div className="grid grid-cols-3 gap-6">
             {advisors.map(advisor => (
               <AdvisorCard key={advisor.id} advisor={advisor} />
             ))}
           </div>
-        </Card>
+        </Container>
       </div>
     </div>
   );

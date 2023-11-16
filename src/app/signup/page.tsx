@@ -1,11 +1,11 @@
-import Card from '@/components/Card';
+import Container from '@/components/Container';
 
 function Signup() {
   return (
     <div className="container mx-auto mt-16">
-      <Card>
+      <Container>
         <h1 className="text-3xl">Signup</h1>
-      </Card>
+      </Container>
     </div>
   );
 }
