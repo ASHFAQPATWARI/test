@@ -14,10 +14,10 @@ export interface IAdvisorCardProps {
 }
 
 function AdvisorCard({ advisor }: IAdvisorCardProps) {
-  const { name, id, email, logo, mobile, services } = advisor;
+  const { name, email, mobile, services } = advisor;
   return (
-    <div className="bg-white flex flex-col overflow-hidden rounded-lg drop-shadow">
-      <div className="bg-lavendar flex items-center gap-2 px-8 py-4">
+    <div className="flex flex-col overflow-hidden rounded-lg bg-white drop-shadow">
+      <div className="flex items-center gap-2 bg-lavendar px-8 py-4">
         <div>
           <Image
             src="https://placehold.co/40x40.png"

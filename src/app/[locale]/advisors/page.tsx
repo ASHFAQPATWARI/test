@@ -1,5 +1,6 @@
-import AdvisorCard, { IAdvisor } from '@/components/AdvisorCard';
 import Container from '@/components/Container';
+import { useTranslations } from 'next-intl';
+import AdvisorCard, { IAdvisor } from './components/AdvisorCard';
 
 const advisors: IAdvisor[] = [
   {
@@ -77,11 +78,12 @@ const advisors: IAdvisor[] = [
 ];
 
 export default function Advisor() {
+  const t = useTranslations('InvestmentAdvisor');
   return (
     <div className="container mx-auto">
       <div className="my-16">
         <h4 className="mb-10 text-3xl font-semibold text-primary">
-          Investment advisor
+          {t('title')}
         </h4>
         <Container>
           <div className="grid grid-cols-3 gap-6">

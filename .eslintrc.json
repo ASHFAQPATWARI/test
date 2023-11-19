@@ -9,5 +9,6 @@
         "eslint-disable-next-line react-hooks/exhaustive-deps": 0
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["**/*.d.ts"]
 }

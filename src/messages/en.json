@@ -1,0 +1,75 @@
+{
+  "Global": {
+    "login": "Login / Create an account",
+    "language": "العربية",
+    "username": "User Name",
+    "qid": "QID",
+    "mobileNumber": "Mobile Number",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "onlylogin": "Login",
+    "ok": "OK"
+  },
+  "Footer": {
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "Header": {
+    "home": "Home",
+    "faq": "FAQ",
+    "investmentAdvisor": "Investment Advisor",
+    "myInterest": "My Interest",
+    "myCompanies": "My Companies for sale"
+  },
+  "Filters": {
+    "length": "Length of business",
+    "investmentSize": "Investment size",
+    "location": {
+      "title": "Location",
+      "placeholder": "Select location"
+    },
+    "industry": {
+      "title": "Industry",
+      "placeholder": "Select industry"
+    }
+  },
+  "Dashboard": {
+    "title": "Businesses for Sale and Investment Opportunities"
+  },
+  "Business": {
+    "totalAnnualSales": "Total annual sales",
+    "businessForSale": "Business for sale",
+    "ebitdaValue": "EBITDA Value",
+    "length": "Length of the business",
+    "location": "Location",
+    "industries": "Industries",
+    "viewDetails": "View details",
+    "publish": "Publish"
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions (FAQ)"
+  },
+  "Signup": {
+    "createAnAccount": "Create an account",
+    "enterInformation": "Enter your information to start with the registration process",
+    "continueWithGoogle": "Continue with Google",
+    "or": "OR"
+  },
+  "MyCompanies": {
+    "title": "My companies for sale",
+    "needAssistance": "Need assistance from investment advisory ?",
+    "requestNow": "Request now",
+    "addCompany": "Add company",
+    "requestSentSuccess": "Your request for advisory assistance has been raised to QDB, we will reach out to you soon"
+  },
+  "Interests": {
+    "title": "My Interests"
+  },
+  "InvestmentAdvisor": {
+    "title": "Investment Advisor"
+  },
+  "Validations": {
+    "required": "{label} is required!"
+  }
+}

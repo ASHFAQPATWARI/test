@@ -9,20 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/cssinjs": "^1.18.0-alpha.0",
-    "antd": "^5.11.1",
+    "@ant-design/cssinjs": "^1.17.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "antd": "^5.11.2",
     "dayjs": "^1.11.10",
-    "next": "14.0.2",
+    "lodash": "^4.17.21",
+    "next": "14.0.3",
+    "next-intl": "^3.1.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.201",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.0.2",
+    "eslint-config-next": "14.0.3",
     "postcss": "^8",
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.4",

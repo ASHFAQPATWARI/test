@@ -1,9 +1,8 @@
-import BusinessCard, { IBusiness } from '@/components/BusinessCard';
-import Container from '@/components/Container';
+import { IBusiness } from '@/types';
 
-const businesses: IBusiness[] = [
+export const businesses: IBusiness[] = [
   {
-    title: 'ABC Tech Solutions',
+    title: 'Fast food restaurant serving 30 customers a day is up for sale.',
     id: '1a2b3c4d5e6f',
     createdOn: '2023-11-15T08:00:00.000Z',
     ebitdaValue: 2500000.75,
@@ -13,11 +12,15 @@ const businesses: IBusiness[] = [
     annualSales: 5000000,
     annualSalesFormatted: 'QAR 5,000,000',
     establishmentYear: 2010,
-    industry: [{ name: 'Technology', id: '1' }],
+    industry: [
+      { name: 'Technology', id: '1' },
+      { name: 'Healtcare', id: '2' },
+    ],
     location: [{ name: 'Doha', id: '1' }],
   },
   {
-    title: 'Financial Insights LLC',
+    title:
+      'Profitable laundry business with 8 employees, 20-22 clients, and 10-15% margin for sale.',
     id: 'a1b2c3d4e5f6',
     createdOn: '2023-11-05T10:30:00.000Z',
     ebitdaValue: 1800000.25,
@@ -27,11 +30,15 @@ const businesses: IBusiness[] = [
     annualSales: 3000000.5,
     annualSalesFormatted: 'QAR 3,000,000.50',
     establishmentYear: 2005,
-    industry: [{ name: 'Finance', id: '2' }],
-    location: [{ name: 'Doha', id: '1' }],
+    industry: [
+      { name: 'Finance', id: '2' },
+      { name: 'Education', id: '2' },
+    ],
+    location: [{ name: 'Doha', id: '1' }, { name: 'Al Khor', id: '1' }],
   },
   {
-    title: 'MediHealth Solutions',
+    title:
+      'Fresh chicken supply and packaging company serving 9+ supermarkets, producing 1k chickens/day; QAR 6k/order value.',
     id: 'x9y8z7w6v5u4',
     createdOn: '2023-10-15T15:45:00.000Z',
     ebitdaValue: 3500000,
@@ -42,10 +49,11 @@ const businesses: IBusiness[] = [
     annualSalesFormatted: 'QAR 7,000,000.75',
     establishmentYear: 2015,
     industry: [{ name: 'Healthcare', id: '3' }],
-    location: [{ name: 'Doha', id: '1' }],
+    location: [{ name: 'Pearl', id: '1' }],
   },
   {
-    title: 'InnovateTech Solutions',
+    title:
+      'Seeking investment: High-quality electronic equipment business with over 50 clients, 5+ years of experience.',
     id: 'q1w2e3r4t5y6',
     createdOn: '2022-05-10T12:15:00.000Z',
     ebitdaValue: 2800000.5,
@@ -56,10 +64,11 @@ const businesses: IBusiness[] = [
     annualSalesFormatted: 'QAR 5,500,000.75',
     establishmentYear: 2012,
     industry: [{ name: 'Technology', id: '1' }],
-    location: [{ name: 'Doha', id: '1' }],
+    location: [{ name: 'Lusail', id: '1' }],
   },
   {
-    title: 'GlobalFinance Solutions',
+    title:
+      'For Sale: Specialty coffee shop with classic vibes that receives 30 customers daily.',
     id: 'm8n7b6v5c4x3',
     createdOn: '2023-08-03T14:20:00.000Z',
     ebitdaValue: 2100000.75,
@@ -70,36 +79,6 @@ const businesses: IBusiness[] = [
     annualSalesFormatted: 'QAR 4,500,000.50',
     establishmentYear: 2008,
     industry: [{ name: 'Finance', id: '2' }],
-    location: [{ name: 'Doha', id: '1' }],
+    location: [{ name: 'Wakhra', id: '1' }],
   },
 ];
-
-export default function Home() {
-  return (
-    <div className="container mx-auto">
-      <div className="my-16">
-        <h4 className="mb-10 text-3xl font-semibold text-neutral-700">
-          Businesses for Sale and Investment Opportunities
-        </h4>
-        <Container className="mb-10 flex h-[134px] items-center">
-          <div className="grid w-full grid-cols-4 divide-x text-center">
-            <div>01</div>
-            <div>02</div>
-            <div>03</div>
-            <div>04</div>
-          </div>
-        </Container>
-        <Container>
-          <p className="mb-4 text-sm text-neutral-500">
-            Showing 1 -15 of 12345 investors. Sell or Finance your business
-          </p>
-          <div className="grid grid-cols-3 gap-10">
-            {businesses.map(business => (
-              <BusinessCard key={business.id} business={business} />
-            ))}
-          </div>
-        </Container>
-      </div>
-    </div>
-  );
-}

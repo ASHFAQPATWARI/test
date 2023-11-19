@@ -1,81 +1,69 @@
 import Icons from '@/components/Icons';
 import Link from '@/components/Link';
+import { IBusiness } from '@/types';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 dayjs.extend(relativeTime);
 
-export interface IBusiness {
-  title: string;
-  id: string;
-  createdOn: string;
-  ebitdaValue: number;
-  ebitdaValueFormatted: string;
-  saleRate: number;
-  saleRateFormatted: string;
-  annualSales: number;
-  annualSalesFormatted: string;
-  establishmentYear: string | number;
-  industry: { name: string; id: string }[];
-  location: { name: string; id: string }[];
-}
-
 export interface IBusinessCardProps {
   business: IBusiness;
+  isEdit?: boolean;
 }
 
-function BusinessCard({ business }: IBusinessCardProps) {
+function BusinessCard({ business, isEdit = false }: IBusinessCardProps) {
   const {
     title,
     id,
     createdOn,
-    ebitdaValue,
     ebitdaValueFormatted,
-    saleRate,
     saleRateFormatted,
-    annualSales,
     annualSalesFormatted,
     establishmentYear,
     industry,
     location,
   } = business;
+  const t = useTranslations('Business');
   const stats = [
     {
-      title: 'Total annual sales',
+      label: t('totalAnnualSales'),
       value: annualSalesFormatted,
     },
     {
-      title: 'Business for sale',
+      label: t('businessForSale'),
       value: saleRateFormatted,
     },
     {
-      title: 'EBITDA Value',
+      label: t('ebitdaValue'),
       value: ebitdaValueFormatted,
     },
     {
-      title: 'Length of the business',
+      label: t('length'),
       value: establishmentYear,
     },
     {
-      title: 'Location',
+      label: t('location'),
       value: location.map(e => e.name).join(', '),
     },
     {
-      title: 'Industries',
+      label: t('industries'),
       value: industry.map(e => e.name).join(', '),
     },
   ];
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-lg bg-white shadow-card">
+    <div className="flex min-h-[310px] flex-col overflow-hidden rounded-lg bg-white shadow-card">
       <div className="flex gap-5 bg-lavendar px-8 py-4">
         <div className="grow">
-          <p className="text-sm font-semibold text-primary">{title}</p>
+          <p className="line-clamp-2 text-sm font-semibold text-primary">
+            {title}
+          </p>
         </div>
-        <div>
+        <div className="shrink-0">
           <Image
-            src="/icons/greenTick.svg"
+            src={`/icons/${isEdit ? 'edit' : 'greenTick'}.svg`}
             alt="Checked"
             width={24}
             height={24}
@@ -96,19 +84,20 @@ function BusinessCard({ business }: IBusinessCardProps) {
               className="mt-1"
             />
             <div>
-              <p className="text-xs text-primary-400">{stat.title}</p>
+              <p className="text-xs text-primary-400">{stat.label}</p>
               <p className="text-sm font-semibold text-primary">{stat.value}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="shadow-card-footer flex justify-between gap-4 border-t border-neutral-100 px-8 py-4">
+      <div className="shadow-card-footer mt-auto flex justify-between gap-4 border-t border-neutral-100 px-8 py-4">
         <TimeAgo createdOn={createdOn} />
         <Link
           className="rounded-full bg-secondary-500 px-6 py-2 text-sm font-bold text-white"
           href={`/business/${id}`}
+          size="small"
         >
-          View details
+          {t(isEdit ? 'publish' : 'viewDetails')}
         </Link>
       </div>
     </div>

@@ -11,6 +11,7 @@ const config: Config = {
       'light-gray': 'var(--light-gray)',
       white: 'var(--white)',
       yellow: 'var(--yellow)',
+      'yellow-dark': 'var(--yellow-dark)',
       lavendar: 'var(--lavendar)',
       primary: {
         50: 'var(--primary-50)',
@@ -54,7 +55,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-primary)'],
+        sans: ['var(--font-primary)', 'var(--font-secondary)'],
       },
       boxShadow: {
         card: '0px 0px 8px 5px rgba(0, 0, 0, 0.04)',
@@ -63,6 +64,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };
 export default config;

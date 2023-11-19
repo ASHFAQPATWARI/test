@@ -1,0 +1,75 @@
+{
+  "Global": {
+    "login": "تسجيل الدخول",
+    "language": "English",
+    "username": "اسم المستخدم",
+    "qid": "معرف قطر",
+    "mobileNumber": "رقم الهاتف المحمول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "onlylogin": "تسجيل الدخول",
+    "ok": "نعم"
+  },
+  "Footer": {
+    "privacyPolicy": "خصوصية الموقع",
+    "terms": "الشروط و الأحكام"
+  },
+  "Header": {
+    "home": "بيت",
+    "faq": "أسئلة متكررة",
+    "investmentAdvisor": "مستشار استثماري",
+    "myInterest": "اهتمامي",
+    "myCompanies": "شركاتي للبيع"
+  },
+  "Filters": {
+    "length": "طول العمل",
+    "investmentSize": "حجم الاستثمار",
+    "location": {
+      "title": "موقع",
+      "placeholder": "اختر موقعا"
+    },
+    "industry": {
+      "title": "صناعة",
+      "placeholder": "اختر الصناعة"
+    }
+  },
+  "Dashboard": {
+    "title": "شركات للبيع وفرص الاستثمار"
+  },
+  "Business": {
+    "totalAnnualSales": "إجمالي المبيعات السنوية",
+    "businessForSale": "المشروع للبيع",
+    "ebitdaValue": "EBITDA قيمة",
+    "length": "طول العمل",
+    "location": "موقع",
+    "industries": "الصناعات",
+    "viewDetails": "عرض التفاصيل",
+    "publish": "ينشر"
+  },
+  "FAQ": {
+    "title": "أسئلة متكررة"
+  },
+  "Signup": {
+    "createAnAccount": "إنشاء حساب",
+    "enterInformation": "أدخل معلوماتك لتبدأ عملية التسجيل",
+    "continueWithGoogle": "تواصل مع جوجل",
+    "or": "أو"
+  },
+  "MyCompanies": {
+    "title": "شركاتي للبيع",
+    "needAssistance": "هل تحتاج إلى مساعدة من الاستشارات الاستثمارية؟",
+    "requestNow": "اطلب الآن",
+    "addCompany": "أضف شركة",
+    "requestSentSuccess": "لقد تم إرسال طلبك للحصول على مساعدة استشارية إلى بنك قطر للتنمية، وسنتواصل معك قريبًا"
+  },
+  "Interests": {
+    "title": "اهتماماتي"
+  },
+  "InvestmentAdvisor": {
+    "title": "مستشار استثماري"
+  },
+  "Validations": {
+    "required": "{label} مطلوب"
+  }
+}
