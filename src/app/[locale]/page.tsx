@@ -16,7 +16,7 @@ export default function Home() {
         <BusinessFilters />
         <Container>
           <p className="mb-4 text-sm text-neutral-500">
-            Showing 1 -15 of 12345 investors. Sell or Finance your business
+            Showing 1 - 15 of 12345 investors. Sell or Finance your business
           </p>
           <div className="grid grid-cols-3 gap-10">
             {businesses.map(business => (
